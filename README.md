@@ -17,7 +17,7 @@ Todos：
 ## 文件
 
 - [`SPEC.md`](SPEC.md): SDES v1 详细规范。
-- [`example.json`](example.json): 示例。
+- [`example.sdes.json`](example.seds.json): 示例。
 
 ## 座位表模型
 
