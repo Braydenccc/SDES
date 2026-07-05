@@ -2,179 +2,210 @@
   "format": "student-data-exchange-schema",
   "version": 1,
   "manifest": {
-    "producer": "BSCE",
-    "producerVersion": "2.3.0",
-    "exportedAt": "2026-07-05T10:00:00+08:00",
-    "locale": "zh-CN"
+      "producer": "BSCE",
+      "producerVersion": "2.3.0",
+      "exportedAt": "2026-07-05T10:00:00+08:00",
+      "locale": "zh-CN"
   },
-  "metadata": {
-    "name": "三年级二班",
-    "description": "三年级二班的学生数据"
-  },
-  "students": [
+  "classes": [
     {
-      "id": "student:001",
-      "number": "1",
-      "gender": "male",
-      "name": {
-        "display": "张三"
+      "id": "class:3-2",
+      "metadata": {
+          "name": "三年级二班",
+          "description": "三年级二班的学生数据",
+          "class": 3,
+          "grade": 3
       },
-      "tags": [
-        "tag:group-a"
-      ],
-      "attributes": {
-        "attr:score": 92,
-        "attr:height": 168
-      }
-    },
-    {
-      "id": "student:002",
-      "number": "2",
-      "gender": "female",
-      "name": {
-        "display": "李四"
-      },
-      "tags": [
-        "tag:group-b"
-      ],
-      "attributes": {
-        "attr:score": 88,
-        "attr:height": 162
-      }
-    }
-  ],
-  "tags": [
-    {
-      "id": "tag:group-a",
-      "name": "A组",
-      "color": "#FF0000"
-    },
-    {
-      "id": "tag:group-b",
-      "name": "B组",
-      "color": "rgba(0, 255, 0, 0.5)"
-    }
-  ],
-  "attributeDefinitions": [
-    {
-      "id": "attr:score",
-      "name": "成绩",
-      "type": "number",
-      "unit": "分"
-    },
-    {
-      "id": "attr:height",
-      "name": "身高",
-      "type": "number",
-      "unit": "cm"
-    }
-  ],
-  "seatCharts": [
-    {
-      "id": "chart:grid-main",
-      "name": "网格座位表",
-      "layoutModel": "grid",
-      "coordinateSystem": {
-        "origin": "front-left",
-        "xDirection": "left-to-right",
-        "yDirection": "front-to-back"
-      },
-      "grid": {
-        "rows": 6,
-        "columns": 8
-      },
-      "seats": [
-        {
-          "id": "seat:grid:0:0",
-          "x": 0,
-          "y": 0,
-          "kind": "seat",
-          "group": 1,
-          "capacity": 1
-        },
-        {
-          "id": "aisle:grid:2:0",
-          "x": 2,
-          "y": 0,
-          "kind": "aisle"
-        },
-        {
-          "id": "platform:grid:front",
-          "x": 4,
-          "y": 0,
-          "kind": "platform"
-        }
-      ],
-      "assignments": [
-        {
-          "seatId": "seat:grid:0:0",
-          "studentId": "student:001"
-        }
-      ]
-    },
-    {
-      "id": "chart:grouped-main",
-      "name": "大组座位表",
-      "layoutModel": "groupedColumns",
-      "coordinateSystem": {
-        "origin": "front-left",
-        "xDirection": "left-to-right",
-        "yDirection": "front-to-back"
-      },
-      "groupedColumns": {
-        "groups": [
+      "floor": 2,
+      "building": "1",
+      "room": "201",
+      "students": [
           {
-            "id": "group:0",
-            "columns": 2,
-            "rows": 7
+              "id": "student:001",
+              "number": "1",
+              "gender": "male",
+              "name": {
+                  "display": "李华",
+                  "family": "李",
+                  "given": "华",
+                  "nickname": "小李"
+              },
+              "tags": [
+                  "tag:group-a"
+              ],
+              "attributes": {
+                  "attr:score": 92,
+                  "attr:height": 168
+              }
           },
           {
-            "id": "group:1",
-            "columns": 2,
-            "rows": 7
+              "id": "student:002",
+              "number": "2",
+              "gender": "female",
+              "name": {
+                  "display": "王芳",
+                  "family": "王",
+                  "given": "芳",
+                  "nickname": "小王"
+              },
+              "tags": [
+                  "tag:group-b"
+              ],
+              "attributes": {
+                  "attr:score": 88,
+                  "attr:height": 162
+              }
           }
-        ]
-      },
-      "seats": [
-        {
-          "id": "seat:grouped:0:0:0",
-          "kind": "seat",
-          "group": 0,
-          "column": 0,
-          "row": 0,
-          "capacity": 1
-        },
-        {
-          "id": "seat:grouped:0:1:0",
-          "kind": "seat",
-          "group": 0,
-          "column": 1,
-          "row": 0
-        },
-        {
-          "id": "guard:left",
-          "kind": "guard",
-          "side": "left"
-        }
       ],
-      "assignments": [
-        {
-          "seatId": "seat:grouped:0:0:0",
-          "studentId": "student:001"
-        },
-        {
-          "seatId": "guard:left",
-          "studentId": "student:002"
-        }
+      "tags": [
+          {
+              "id": "tag:group-a",
+              "name": "A组",
+              "color": "#FF0000"
+          },
+          {
+              "id": "tag:group-b",
+              "name": "B组",
+              "color": "#00FF0080"
+          }
+      ],
+      "attributeDefinitions": [
+          {
+              "id": "attr:score",
+              "name": "成绩",
+              "type": "number",
+              "unit": "分"
+          },
+          {
+              "id": "attr:height",
+              "name": "身高",
+              "type": "number",
+              "unit": "cm"
+          }
+      ],
+      "seatCharts": [
+          {
+              "id": "chart:grid-main",
+              "name": "网格座位表",
+              "layoutModel": "grid",
+              "platformPosition": "top",
+              "doorPosition": "right",
+              "coordinateSystem": {
+                  "origin": "front-left",
+                  "xDirection": "left-to-right",
+                  "yDirection": "front-to-back"
+              },
+              "grid": {
+                  "rows": 6,
+                  "columns": 8
+              },
+              "seats": [
+                  {
+                      "id": "seat:grid:0:0",
+                      "x": 0,
+                      "y": 0,
+                      "kind": "seat",
+                      "group": 1,
+                      "capacity": 1
+                  },
+                  {
+                      "id": "aisle:grid:2:0",
+                      "x": 2,
+                      "y": 0,
+                      "kind": "aisle"
+                  },
+                  {
+                      "id": "platform:grid:front",
+                      "x": 4,
+                      "y": 0,
+                      "kind": "platform"
+                  }
+              ],
+              "assignments": [
+                  {
+                      "seatId": "seat:grid:0:0",
+                      "studentId": "student:001"
+                  }
+              ]
+          },
+          {
+              "id": "chart:grouped-main",
+              "name": "大组座位表",
+              "layoutModel": "groupedColumns",
+              "platformPosition": "top",
+              "doorPosition": "right",
+              "coordinateSystem": {
+                  "origin": "front-left",
+                  "xDirection": "left-to-right",
+                  "yDirection": "front-to-back"
+              },
+              "groupedColumns": {
+                  "groups": [
+                      {
+                          "id": "group:0",
+                          "columns": 2,
+                          "rows": 7
+                      },
+                      {
+                          "id": "group:1",
+                          "columns": 2,
+                          "rows": 7
+                      }
+                  ]
+              },
+              "seats": [
+                  {
+                      "id": "seat:grouped:0:0:0",
+                      "kind": "seat",
+                      "group": 0,
+                      "column": 0,
+                      "row": 0,
+                      "capacity": 1
+                  },
+                  {
+                      "id": "seat:grouped:0:1:0",
+                      "kind": "seat",
+                      "group": 0,
+                      "column": 1,
+                      "row": 0
+                  },
+                  {
+                      "id": "guard:left:0",
+                      "kind": "guard",
+                      "guardPos": {
+                          "side": "left",
+                          "index": 0
+                      }
+                  },
+                  {
+                      "id": "guard:left:1",
+                      "kind": "guard",
+                      "guardPos": {
+                          "side": "left",
+                          "index": 1
+                      }
+                  }
+              ],
+              "assignments": [
+                  {
+                      "seatId": "seat:grouped:0:0:0",
+                      "studentId": "student:001"
+                  },
+                  {
+                      "seatId": "guard:left:0",
+                      "studentId": "student:002"
+                  }
+              ]
+          }
       ]
     }
   ],
   "extensions": {
-    "app.bsce": {
-      "customLayoutMode": "compact"
-    },
-    "org.open-fuckseats": {
-      "constraints": []
-    }
+      "app.bsce": {
+          "customLayoutMode": "compact"
+      },
+      "org.open-fuckseats": {
+          "constraints": []
+      }
   }
 }
