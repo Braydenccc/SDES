@@ -11,7 +11,7 @@ metadata: # 可选，班级/名单说明信息
   name: 三年级二班 # 可选，字符串，班级、群组或名单名称
   description: 三年级二班的学生数据 # 可选，字符串，说明文字
 
-students: # 学生名单
+students: # 可选，学生名单
   - id: student:001 # 字符串，本文件内学生 ID
     number: "1" # 可选，字符串，学号/编号
     gender: male # 可选，字符串，male / female / other / unknown

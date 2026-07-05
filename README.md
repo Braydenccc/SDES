@@ -1,6 +1,24 @@
-# 学生信息交换格式（SDES）
+<div align="center">
+
+# SDES
+
+通用的学生信息交换格式
+
+v1
+
+</div>
+
+---
 
 SDES 即 Student Data Exchange Schema ，允许将学生信息及座位表编码为规范化、可拓展的单文件导出，方便在各个管理软件中交换数据。
+
+尚未编写完备，暂且不要在项目中使用。
+
+Todos：
+
+- Schema 文件
+- 代码实例
+- 作为导出文件 payload 的规范
 
 ## 文件
 
@@ -11,14 +29,16 @@ SDES 即 Student Data Exchange Schema ，允许将学生信息及座位表编码
 
 - `format` 固定为 `student-data-exchange-schema`，用于识别文件类型。
 - `version` 是格式版本，当前示例为 `1`。
-- `manifest` 保存导出软件、导出时间、语言等文件元信息。
-- `metadata` 保存班级、名单或数据集说明。
-- `students` 是学生实体列表，学生不直接内嵌座位。
-- `tags` 定义学生标签，`students[].tags` 只引用标签 ID。
-- `attributeDefinitions` 定义学生属性，`students[].attributes` 只保存属性值。
-- `seatCharts` 保存一个或多个座位表。
-- `seatCharts[].assignments` 保存学生与座位的绑定关系。
-- `extensions` 保存软件私有扩展。
+- `manifest` （可选）保存导出软件、导出时间、语言等文件元信息。
+- `metadata` （可选）保存班级、名单或数据集说明。
+- `students` （可选）是学生实体列表，学生不直接内嵌座位。
+- `tags` （可选）定义学生标签，`students[].tags` 只引用标签 ID。
+- `attributeDefinitions` （可选）定义学生属性，`students[].attributes` 只保存属性值。
+- `seatCharts` （可选）保存一个或多个座位表。
+- `seatCharts[].assignments` （可选）保存学生与座位的绑定关系。
+- `extensions` （可选）保存软件私有扩展。
+
+除前两个以外，大部分对象都是可选的，但最好在文件中写入一个以上的有效对象。
 
 ## 座位表模型
 
