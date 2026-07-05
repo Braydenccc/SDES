@@ -61,25 +61,25 @@ seatCharts: # 可选，座位表列表
       xDirection: left-to-right # 字符串，left-to-right / right-to-left
       yDirection: front-to-back # 字符串，front-to-back / back-to-front
     grid: # layoutModel 为 grid 时建议填写，object
-      rows: 6 # 正整数，网格总行数
-      columns: 8 # 正整数，网格总列数
+      rows: 6 # 正整数，网格总行数；0-based 坐标下 seat 的合法 y 为 0..5
+      columns: 8 # 正整数，网格总列数；0-based 坐标下 seat 的合法 x 为 0..7
     seats: # array，网格内座位或标志物
-      - id: seat:grid:1:1 # 字符串，单元 ID，assignments 需要引用
-        x: 1 # 整数，网格 x 坐标
-        y: 1 # 整数，网格 y 坐标
+      - id: seat:grid:0:0 # 字符串，单元 ID，assignments 需要引用
+        x: 0 # 整数，0-based 网格 x 坐标；seat 必须满足 0 <= x < columns
+        y: 0 # 整数，0-based 网格 y 坐标；seat 必须满足 0 <= y < rows
         kind: seat # 字符串，枚举建议：seat / platform / door / aisle / empty / guard
         group: 1 # 可选，整数|字符串，座位所属组
         capacity: 1 # 可选，非负整数，每个座位的容量，默认 1
-      - id: aisle:grid:2:1
+      - id: aisle:grid:2:0
         x: 2
-        y: 1
+        y: 0
         kind: aisle
       - id: platform:grid:front
         x: 4
-        y: 0
+        y: 0 # 非 seat 标志物可兼容源格式占用第 0 行或越界，但不推荐用它暗示座位从 1 开始
         kind: platform
     assignments: # 可选，array，学生与座位绑定关系
-      - seatId: seat:grid:1:1 # 字符串，引用 seats.id
+      - seatId: seat:grid:0:0 # 字符串，引用 seats.id
         studentId: student:001 # 字符串，引用 students.id
 
   - id: chart:grouped-main
@@ -123,4 +123,3 @@ extensions: # 可选，扩展数据；未知命名空间应原样保留但不能
     customLayoutMode: compact # 可选，任意 JSON/YAML 基础类型，私有字段示例
   org.open-fuckseats: # 可选，open_fuckseats 私有扩展
     constraints: [] # 可选，array，无法映射到通用规则时可保留在这里
-    

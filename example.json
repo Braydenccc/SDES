@@ -85,17 +85,17 @@
       },
       "seats": [
         {
-          "id": "seat:grid:1:1",
-          "x": 1,
-          "y": 1,
+          "id": "seat:grid:0:0",
+          "x": 0,
+          "y": 0,
           "kind": "seat",
           "group": 1,
           "capacity": 1
         },
         {
-          "id": "aisle:grid:2:1",
+          "id": "aisle:grid:2:0",
           "x": 2,
-          "y": 1,
+          "y": 0,
           "kind": "aisle"
         },
         {
@@ -107,7 +107,7 @@
       ],
       "assignments": [
         {
-          "seatId": "seat:grid:1:1",
+          "seatId": "seat:grid:0:0",
           "studentId": "student:001"
         }
       ]

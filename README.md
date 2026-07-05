@@ -2,9 +2,9 @@
 
 通用的学生信息交换格式
 
-SDES 即 Student Data Exchange Schema ，允许将学生信息及座位表编码为规范化、可拓展的单文件导出，方便在各个管理软件中交换数据。
+SDES 即 Student Data Exchange Schema ，允许将学生信息及座位表编码为规范化、可扩展的单文件导出，方便在各个管理软件中交换数据。
 
-尚未编写完备，暂且不要在项目中使用。目前我直接修改的是 yaml，json可能滞后。
+尚未编写完备，暂且不要在项目中使用。之后使用json格式，yaml方便人工编写。
 
 Todos：
 
@@ -15,7 +15,7 @@ Todos：
 ## 文件
 
 - `example.yml`: 带行内注释的 YAML 示例。
-- `example.json`: 与 `example.yml` 等价的 JSON 示例。
+- `example.json`: 由 `example.yml` 生成的 JSON 示例。
 
 ## 格式约定
 
@@ -39,6 +39,6 @@ Todos：
 - `groupedColumns`: 大组-列-行模型，适合座位表编辑器 v2 一类以大组、组内列、组内行为核心结构的软件。
 - `grid`: 二维网格模型，适合 open_fuckseats 一类以 `x/y` 网格单元表示座位、走廊、讲台和空白区域的软件。
 
-## 拓展
+## 扩展
 
-在 extensions 中存放未列出的拓展数据。所有拓展数据的键前应当加上导出软件的命名空间，如 'sce:autoSaveTime'。导入时，对无法处理的数据应当丢弃。
+在 extensions 中存放未列出的扩展数据。所有扩展数据的键前应当加上导出软件的命名空间，如 'sce:autoSaveTime'。导入时，对无法处理的数据应当丢弃。
