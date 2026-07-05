@@ -14,9 +14,9 @@ metadata: # 可选，班级/名单说明信息
 students: # 可选，学生名单
   - id: student:001 # 字符串，本文件内学生 ID
     number: "1" # 可选，字符串，学号/编号
-    gender: male # 可选，字符串，male / female / other / unknown
+    gender: male # 可选，字符串，male / female / other / unknown 等
     name: # 姓名信息
-      display: 张三 # 字符串，用于显示的姓名
+      display: 李华 # 字符串，用于显示的姓名
     tags:
       - tag:group-a # 字符串，引用 tags.id
     attributes: # 可选，学生属性值，键引用 attributeDefinitions.id
@@ -27,7 +27,7 @@ students: # 可选，学生名单
     number: "2"
     gender: female
     name:
-      display: 李四
+      display: 王芳
     tags:
       - tag:group-b
     attributes:
