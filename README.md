@@ -1,6 +1,7 @@
 # SDES
 
 >通用的学生信息交换格式
+>
 >v1.0
 
 SDES 即 Student Data Exchange Schema ，是一个基于 JSON 的 DSL ，为学生信息及座位表编码提供规范化、可扩展的单文件交换格式，方便在各个管理软件中交换数据。
