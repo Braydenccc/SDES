@@ -1,14 +1,6 @@
-<div align="center">
-
-# SDES
+# SDES v1
 
 通用的学生信息交换格式
-
-v1
-
-</div>
-
----
 
 SDES 即 Student Data Exchange Schema ，允许将学生信息及座位表编码为规范化、可拓展的单文件导出，方便在各个管理软件中交换数据。
 
