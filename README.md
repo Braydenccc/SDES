@@ -4,9 +4,9 @@
 >
 >v1.0
 
-SDES 即 Student Data Exchange Schema ，是一个基于 JSON 的 DSL ，为学生信息及座位表编码提供规范化、可扩展的单文件交换格式，方便在各个管理软件中交换数据。
+SDES 即 Student Data Exchange Schema ，是一个基于 JSON 的 DSL ，为学生信息及座位表提供规范化、可扩展的单文件交换格式，方便在各个管理软件中交换数据。
 
-SDES 维护单一的可拓展的 JSON 格式来满足各项需求，以期望最优的兼容性和效率。
+SDES 维护单一的可扩展的 JSON 格式来满足各项需求，以期望最优的兼容性和效率。
 
 征集意见中，欢迎拷打。
 
@@ -17,7 +17,7 @@ Todos：
 ## 文件
 
 - [`SPEC.md`](SPEC.md): SDES v1 详细规范。
-- [`example.sdes.json`](example.seds.json): 示例。
+- [`example.sdes.json`](example.sdes.json): 示例。
 
 ## 座位表模型
 
