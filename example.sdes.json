@@ -96,17 +96,38 @@
                   "yDirection": "front-to-back"
               },
               "grid": {
-                  "rows": 6,
-                  "columns": 8
+                  "rows": 2,
+                  "columns": 5
               },
               "seats": [
                   {
-                      "id": "seat:grid:0:0",
+                      "id": "seat:grid:left:0:0",
                       "x": 0,
                       "y": 0,
                       "kind": "seat",
-                      "group": 1,
+                      "group": "left",
                       "capacity": 1
+                  },
+                  {
+                      "id": "seat:grid:left:1:0",
+                      "x": 1,
+                      "y": 0,
+                      "kind": "seat",
+                      "group": "left"
+                  },
+                  {
+                      "id": "seat:grid:left:0:1",
+                      "x": 0,
+                      "y": 1,
+                      "kind": "seat",
+                      "group": "left"
+                  },
+                  {
+                      "id": "seat:grid:left:1:1",
+                      "x": 1,
+                      "y": 1,
+                      "kind": "seat",
+                      "group": "left"
                   },
                   {
                       "id": "aisle:grid:2:0",
@@ -115,15 +136,43 @@
                       "kind": "aisle"
                   },
                   {
-                      "id": "platform:grid:front",
+                      "id": "aisle:grid:2:1",
+                      "x": 2,
+                      "y": 1,
+                      "kind": "aisle"
+                  },
+                  {
+                      "id": "seat:grid:right:0:0",
+                      "x": 3,
+                      "y": 0,
+                      "kind": "seat",
+                      "group": "right"
+                  },
+                  {
+                      "id": "seat:grid:right:1:0",
                       "x": 4,
                       "y": 0,
-                      "kind": "platform"
+                      "kind": "seat",
+                      "group": "right"
+                  },
+                  {
+                      "id": "seat:grid:right:0:1",
+                      "x": 3,
+                      "y": 1,
+                      "kind": "seat",
+                      "group": "right"
+                  },
+                  {
+                      "id": "seat:grid:right:1:1",
+                      "x": 4,
+                      "y": 1,
+                      "kind": "seat",
+                      "group": "right"
                   }
               ],
               "assignments": [
                   {
-                      "seatId": "seat:grid:0:0",
+                      "seatId": "seat:grid:left:0:0",
                       "studentId": "student:001"
                   }
               ]

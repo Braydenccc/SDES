@@ -26,6 +26,10 @@ Todos：
 - `groupedColumns`: 大组-列-行模型，适合座位表编辑器 v2 一类以大组、组内列、组内行为核心结构的软件。
 - `grid`: 二维网格模型，适合 open_fuckseats 一类以 `x/y` 网格单元表示座位、走廊、讲台和空白区域的软件。
 
+生产者应优先按来源软件的原始结构选择一种 `layoutModel` 输出，不要求同时输出两套模型。消费者无法原生支持某种模型时，可以参考 [`SPEC.md`](SPEC.md) 中的布局模型转换建议进行兼容降级；转换可能丢失组间距、`aisle`、`empty` 或标志物等信息。
+
+`grid` 中的 `seats[].group` 是物理或逻辑分组提示，常用于转换为 `groupedColumns`；`groupedColumns` 中的 `seats[].group` 是对 `groupedColumns.groups[]` 的引用。
+
 `classes[].seatCharts[].platformPosition` 用于声明讲台显示位置，取值为 `top` 或 `bottom`。
 `classes[].seatCharts[].doorPosition` 用于声明门显示位置，取值为 `left` 或 `right`。
 
